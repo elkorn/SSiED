@@ -1,0 +1,12 @@
+build_release.xml
+build
+bin
+lib/rapidminer.jar
+lib/launcher.jar
+lib/plugins/
+build_test/
+installation/version.nsi
+/deploy
+/dev
+/javadoc
+resources/com/rapidminer/resources/test/
