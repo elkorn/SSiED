@@ -20,7 +20,7 @@ Nowe operatory definiowane s¹ w projekcie ``RapidMiner_Extension_Template_Unuk``
 
  ``getParameterTypes`` - parametry operatora
 
-       Wejœcia i wyjœcia operatora definiowane s¹ jako pola klasy:
+ Wejœcia i wyjœcia operatora definiowane s¹ jako pola klasy:
 
         private final InputPort exampleSetInput = getInputPorts().createPort("nazwa wejscia");
         private final OutputPort exampleSetOutput = getOutputPorts().createPort("nazwa wyjscia");
@@ -31,14 +31,14 @@ Nowe operatory definiowane s¹ w projekcie ``RapidMiner_Extension_Template_Unuk``
 	          super(description);
         }
 
-       W ciele konstruktora typowe jest nadawanie warunków pocz¹tkowych dla wejœæ/wyjœæ, ale tylko jak chcemy mieæ warninga w rapidminerze gdy coœ nie jest pod³¹czone.
+ W ciele konstruktora typowe jest nadawanie warunków pocz¹tkowych dla wejœæ/wyjœæ, ale tylko jak chcemy mieæ warninga w rapidminerze gdy coœ nie jest pod³¹czone.
 
-       Przyk³adowe odbieranie danych z portów/ wysy³anie na port:
+ Przyk³adowe odbieranie danych z portów/ wysy³anie na port:
 
         ExampleSet inputExampleSet = exampleSetInput.getData(ExampleSet.class);
         exampleSetOutput.deliver(result); 
 
-  Mo¿na siê posi³kowaæ istniej¹cym operatorem.
+ Mo¿na siê posi³kowaæ istniej¹cym operatorem.
 3.  Po zdefiniowaniu klasy nale¿y przejœæ do katalogu ``resources/com/rapidminer/resources/`` i w pliku ``BalancingOperators.xml`` dodaæ informacje o swoim operatorze:
 
         <group key="">
@@ -52,7 +52,7 @@ Nowe operatory definiowane s¹ w projekcie ``RapidMiner_Extension_Template_Unuk``
           </group>
         </group>
 
-  Znaczniki ``<group key="nazwa">`` informuj¹ w jakiej kategorii zostanie umieszczony nowy operator (panel ``Operators`` w rapidminerze).
+ Znaczniki ``<group key="nazwa">`` informuj¹ w jakiej kategorii zostanie umieszczony nowy operator (panel ``Operators`` w rapidminerze).
 
 4.  Nazwa nadana w tagach ``<key></key>`` mo¿e zostaæ u¿yta do t³umaczenia nazwy operatora w pliku ``OperatorsDocTemplate.xml`` w katalogu``resources/com/rapidminer/resources/i18n/``. 
 
@@ -68,4 +68,4 @@ Nowe operatory definiowane s¹ w projekcie ``RapidMiner_Extension_Template_Unuk``
 5.  Budujemy projekt Ant'em poprzez plik ``build.xml``  (PPM -> Run as -> Ant build) w g³ównym katalogu.
 
 
-  Zbudowane rozszerzenie znajdzie siê w projekcie ``Rapidminer_Unuk`` w folderze ``lib/plugins``. Wystarczy uruchomiæ ``lib/rapidminer.jar`` i wszystko powinno dzia³aæ. Rozszerzenie mo¿na te¿ skopiowaæ do analogicznego folderu w rapidminerze 6 i te¿ zadzia³a.
+ Zbudowane rozszerzenie znajdzie siê w projekcie ``Rapidminer_Unuk`` w folderze ``lib/plugins``. Wystarczy uruchomiæ ``lib/rapidminer.jar`` i wszystko powinno dzia³aæ. Rozszerzenie mo¿na te¿ skopiowaæ do analogicznego folderu w rapidminerze 6 i te¿ zadzia³a.
