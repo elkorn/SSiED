@@ -1,9 +1,4 @@
-build_release.xml
-build
-bin
-lib/rapidminer.jar
-lib/launcher.jar
-lib/plugins/
+build/
 build_test/
 installation/version.nsi
 /deploy
