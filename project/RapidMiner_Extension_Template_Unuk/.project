@@ -3,6 +3,7 @@
 	<name>RapidMiner_Extension_Template_Unuk</name>
 	<comment></comment>
 	<projects>
+		<project>RapidMiner_Unuk</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
