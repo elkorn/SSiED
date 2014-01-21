@@ -20,6 +20,7 @@
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program.  If not, see http://www.gnu.org/licenses/.
  */
+
 package com.rapidminer.operator.preprocessing.sampling;
 
 import java.util.List;
@@ -42,7 +43,6 @@ import com.rapidminer.parameter.conditions.EqualTypeCondition;
 import com.rapidminer.tools.OperatorResourceConsumptionHandler;
 import com.rapidminer.tools.RandomGenerator;
 
-
 /**
  * This operator constructs a bootstrapped sample from the given example set. That means
  * that a sampling with replacement will be performed. The usual sample size is the number 
@@ -57,7 +57,7 @@ public class BootstrappingOperator extends AbstractSamplingOperator {
 
 	public static final String PARAMETER_SAMPLE = "sample";
 
-	public static final String[] SAMPLE_MODES = { "absolute" , "relative" };
+	public static final String[] SAMPLE_MODES = { "absolute", "relative" };
 
 	public static final int SAMPLE_ABSOLUTE = 0;
 
@@ -78,28 +78,28 @@ public class BootstrappingOperator extends AbstractSamplingOperator {
 	@Override
 	protected MDInteger getSampledSize(ExampleSetMetaData emd) throws UndefinedParameterError {
 		switch (getParameterAsInt(PARAMETER_SAMPLE)) {
-		case SAMPLE_ABSOLUTE:
-			return new MDInteger(getParameterAsInt(PARAMETER_SAMPLE_SIZE));
-		case SAMPLE_RELATIVE:
-			MDInteger number = emd.getNumberOfExamples();
-			number.multiply(getParameterAsDouble(PARAMETER_SAMPLE_RATIO));
-			return number;
-		default:
-			return new MDInteger();
+			case SAMPLE_ABSOLUTE:
+				return new MDInteger(getParameterAsInt(PARAMETER_SAMPLE_SIZE));
+			case SAMPLE_RELATIVE:
+				MDInteger number = emd.getNumberOfExamples();
+				number.multiply(getParameterAsDouble(PARAMETER_SAMPLE_RATIO));
+				return number;
+			default:
+				return new MDInteger();
 		}
 	}
 
 	@Override
-	public ExampleSet apply(ExampleSet exampleSet) throws OperatorException {         
+	public ExampleSet apply(ExampleSet exampleSet) throws OperatorException {
 		RandomGenerator random = RandomGenerator.getRandomGenerator(this);
 		int size = exampleSet.size();
 		switch (getParameterAsInt(PARAMETER_SAMPLE)) {
-		case SAMPLE_ABSOLUTE:
-			size = getParameterAsInt(PARAMETER_SAMPLE_SIZE);
-			break;
-		case SAMPLE_RELATIVE:
-			size = (int) Math.round(exampleSet.size() * getParameterAsDouble(PARAMETER_SAMPLE_RATIO));
-			break;
+			case SAMPLE_ABSOLUTE:
+				size = getParameterAsInt(PARAMETER_SAMPLE_SIZE);
+				break;
+			case SAMPLE_RELATIVE:
+				size = (int) Math.round(exampleSet.size() * getParameterAsDouble(PARAMETER_SAMPLE_RATIO));
+				break;
 		}
 
 		int[] mapping = null;
@@ -111,10 +111,28 @@ public class BootstrappingOperator extends AbstractSamplingOperator {
 		return new MappedExampleSet(exampleSet, mapping, true);
 	}
 
+	public ExampleSet applyBalanced(ExampleSet exampleSet) throws OperatorException {
+		RandomGenerator random = RandomGenerator.getRandomGenerator(this);
+		int size = exampleSet.size();
+		switch (getParameterAsInt(PARAMETER_SAMPLE)) {
+			case SAMPLE_ABSOLUTE:
+				size = getParameterAsInt(PARAMETER_SAMPLE_SIZE);
+				break;
+			case SAMPLE_RELATIVE:
+				size = (int) Math.round(exampleSet.size() * getParameterAsDouble(PARAMETER_SAMPLE_RATIO));
+				break;
+		}
+
+		int[] mapping = null;
+
+		mapping = MappedExampleSet.createBalancedBootsrappingMapping(exampleSet, size, random);
+		return new MappedExampleSet(exampleSet, mapping, true);
+	}
+
 	@Override
 	public List<ParameterType> getParameterTypes() {
 		List<ParameterType> types = super.getParameterTypes();
-		ParameterType type = new ParameterTypeCategory(PARAMETER_SAMPLE, "Determines how the amount of data is specified.", SAMPLE_MODES, SAMPLE_RELATIVE);  
+		ParameterType type = new ParameterTypeCategory(PARAMETER_SAMPLE, "Determines how the amount of data is specified.", SAMPLE_MODES, SAMPLE_RELATIVE);
 		type.setExpert(false);
 		types.add(type);
 		type = new ParameterTypeInt(PARAMETER_SAMPLE_SIZE, "The number of examples which should be sampled", 1, Integer.MAX_VALUE, 100);
@@ -131,7 +149,7 @@ public class BootstrappingOperator extends AbstractSamplingOperator {
 		types.addAll(RandomGenerator.getRandomGeneratorParameters(this));
 		return types;
 	}
-	
+
 	@Override
 	public ResourceConsumptionEstimator getResourceConsumptionEstimator() {
 		return OperatorResourceConsumptionHandler.getResourceConsumptionEstimator(getInputPort(), BootstrappingOperator.class, null);

@@ -7,6 +7,10 @@
 	            <key>balancing_operator</key>
 	            <class>com.rapidminer.BalancingOperator</class>
 	         </operator>
+	         <operator>
+	            <key>im_glebie_w_las_tym_wiecej_drzew</key>
+	            <class>com.rapidminer.BalancedRandomForestLearner</class>
+	         </operator>
 	      </group>
       </group>
    </group>

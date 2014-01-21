@@ -5,3 +5,4 @@ installation/version.nsi
 /dev
 /javadoc
 resources/com/rapidminer/resources/test/
+/build
