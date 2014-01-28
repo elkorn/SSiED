@@ -1,7 +1,6 @@
 package com.rapidminer;
 
 import com.rapidminer.operator.Operator;
-import com.rapidminer.operator.OperatorCreationException;
 import com.rapidminer.operator.OperatorDescription;
 import com.rapidminer.operator.OperatorException;
 import com.rapidminer.operator.UserError;
@@ -14,33 +13,26 @@ import com.rapidminer.example.ExampleSet;
 import com.rapidminer.example.set.AttributeValueFilter;
 import com.rapidminer.example.set.AttributeValueFilterSingleCondition;
 import com.rapidminer.example.set.ConditionedExampleSet;
-import com.rapidminer.example.set.SplittedExampleSet;
 import com.rapidminer.example.table.DataRow;
 import com.rapidminer.example.table.DoubleArrayDataRow;
-import com.rapidminer.example.table.ExampleTable;
 import com.rapidminer.example.table.MemoryExampleTable;
 import com.rapidminer.example.Attribute;
-import com.rapidminer.parameter.ParameterTypeDouble;
 import com.rapidminer.parameter.ParameterTypeInt;
-import com.rapidminer.parameter.ParameterTypeList;
 import com.rapidminer.parameter.ParameterTypeString;
 import com.rapidminer.operator.ports.metadata.MetaData;
 import com.rapidminer.operator.ports.metadata.ExampleSetMetaData;
 import com.rapidminer.operator.ports.metadata.PassThroughRule;
 import com.rapidminer.operator.ports.metadata.SimplePrecondition;
-import com.rapidminer.operator.preprocessing.join.ExampleSetMerge;
-import com.rapidminer.tools.OperatorService;
 import com.rapidminer.tools.math.container.GeometricDataCollection;
 import com.rapidminer.tools.math.container.LinearList;
 import com.rapidminer.tools.math.similarity.DistanceMeasure;
 import com.rapidminer.tools.math.similarity.DistanceMeasureHelper;
+import com.rapidminer.tools.math.similarity.DistanceMeasures;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.Iterator;
 import java.util.Random;
 import java.util.List;
-import java.util.LinkedList;
 
 
 public class Smote extends Operator{
@@ -85,9 +77,9 @@ public class Smote extends Operator{
     }
 	
     /**
-     * Performs actual data balancing.
+     * Performs teh SMOTEing.
      * @param originalSet - original example set from operator input
-     * @return balanced example set
+     * @return SMOTEd example set
      * @throws OperatorException
      */
 	private ExampleSet apply(ExampleSet originalSet) throws OperatorException {
@@ -100,7 +92,6 @@ public class Smote extends Operator{
         Attribute label = null;
         AttributeValueFilter filter = null;
         ConditionedExampleSet minoritySet = null;
-        SplittedExampleSet perLabelSets = null;
         MemoryExampleTable smotedTable = MemoryExampleTable.createCompleteCopy(originalSet.getExampleTable());
         int resultSize = 0;
         
@@ -118,11 +109,8 @@ public class Smote extends Operator{
         else {
             throw new UserError(this, resultSize);
         }
-        
-        ExampleTable minorityTable = minoritySet.getExampleTable();
-        Integer t = minorityTable.size();
-        
-        DistanceMeasure measure = measureHelper.getInitializedMeasure(minoritySet);
+
+        DistanceMeasure measure = measureHelper.getInitializedMeasure(originalSet);
     	
     	GeometricDataCollection<double[]> samples = new LinearList<double[]>(measure);
 
@@ -140,34 +128,59 @@ public class Smote extends Operator{
 			checkForStop();
 		}
         
-        for (int i=0; i<t; i++) {
-        	DataRow example = minorityTable.getDataRow(i);
+        for (Example example: minoritySet) {
         	int index = 0;
-        	
+        	boolean debug = false;
         	double[] values = new double[valuesSize];
         	for (Attribute attribute: attributes) {
-				values[index] = example.get(attribute);
+				values[index] = example.getValue(attribute);
 				index++;
 			}
+        	if (debug) System.out.println("Sample");
+    		for (int i=0; i<4; i++) {
+    			if (debug) System.out.println(values[i]);
+    		}
         	
         	// calculate k nearest neighbors
         	Collection<double[]> neighborValues = samples.getNearestValues(k, values);
         	// I hate Java
         	Iterator<double[]> it = neighborValues.iterator();
         	double[][] neighborArray = new double[neighborValues.size()][];
+
         	
         	index = 0;
+
+    		if (debug) System.out.println("All neighbors");
         	while (it.hasNext()) {
         		neighborArray[index] = it.next();
+        		if (debug) System.out.println(index);
+        		for (int i=0; i<4; i++) {
+        			if (debug) System.out.println(neighborArray[index][i]);
+        		}
         		index++;
         	}
         	Random generator = new Random();
         	
         	// generate synthetic examples
         	for (int j=0; j<n; j++) {
-        		double[] synthetic = new double[valuesSize];
+        		DataRow sample = example.getDataRow();
+        		double[] newDataRowData = new double[smotedTable.getNumberOfAttributes()];
+                for (int a = 0; a < smotedTable.getNumberOfAttributes(); a++) {
+                    Attribute attribute = smotedTable.getAttribute(a);
+                    if (attribute != null) {
+                        newDataRowData[a] = sample.get(attribute);
+                    } else {
+                        newDataRowData[a] = Double.NaN;
+                    }
+                }
+                smotedTable.addDataRow(new DoubleArrayDataRow(newDataRowData));
+        		DataRow synthetic = smotedTable.getDataRow(smotedTable.size() - 1);
         		// get random neighbor
         		double[] randomNeighborValues = neighborArray[generator.nextInt(neighborValues.size() - 1)];
+        		if (debug) System.out.println("Chosen");
+        		for (int i=0; i<4; i++) {
+        			if (debug) System.out.println(randomNeighborValues[i]);
+        		}
         		// for each continuous attribute
         		index = 0;
         		for (Attribute attribute: attributes) {
@@ -175,179 +188,33 @@ public class Smote extends Operator{
     				double distance = Math.abs(randomNeighborValues[index] - values[index]);
     				// generate random gap
     				double gap = generator.nextDouble();
+    				
     				// attr = sample attr + distance * gap
-    				double newValue = values[index] + distance * gap;
-    				synthetic[index] = newValue;
+    				double newValue = 0.0;
+    				if (randomNeighborValues[index] > values[index]) {
+    					newValue = values[index] + distance * gap;
+    				}
+    				else {
+    					newValue = randomNeighborValues[index] + distance * gap;
+    				}
+    				
+    				if (debug) System.out.print("Sample: ");
+        			if (debug) System.out.println(values[index]);
+        			if (debug) System.out.print("Neighbor: ");
+        			if (debug) System.out.println(randomNeighborValues[index]);
+        			if (debug) System.out.print("New: ");
+        			if (debug) System.out.println(newValue);
+
+    				synthetic.set(attribute, newValue);
     				index++;
-    				smotedTable.addDataRow(new DoubleArrayDataRow(synthetic));
     			}
         	}
+        	debug = false;
 
 			checkForStop();
         }
         
         return smotedTable.createExampleSet();
-		
-		// old code
-		
-//		ExampleSetMerge mergeOperator;
-//		try {
-//			mergeOperator = OperatorService.createOperator(ExampleSetMerge.class);
-//		} catch (OperatorCreationException e) {
-//			e.printStackTrace();
-//			return originalSet;
-//		}
-//
-//		//SplittedExampleSet perLabelSets = null;
-//        //Attribute label = null;
-//        ExampleSet newExampleSet = null;
-//        ExampleSet randomExampleSet = null;
-//        List<String[]> valuePairs = null;
-//        //int resultSize = 0;
-//        Double setPart = 0.0;
-//        String labelValue = "";
-//        List<ExampleSet> newExampleSetList = new LinkedList<ExampleSet>();
-//        Example nextExample;
-//        
-//        // get label attribute
-//        label = originalSet.getAttributes().getLabel();
-//        if (label != null) {
-//        	if (label.isNominal()) {
-//        		perLabelSets = SplittedExampleSet.splitByAttribute(originalSet, label);
-//            } 
-//            else {
-//                throw new UserError(this, 105);
-//            }
-//        } 
-//        else {
-//            throw new UserError(this, resultSize);
-//        }
-//            
-//        valuePairs = getParameterList(PARAMETER_SAMPLE_SIZE_PER_CLASS_LIST);
-//
-//        // try to perform data balancing for every class
-//        for(int i = 0; i < perLabelSets.getNumberOfSubsets(); i++){
-//        	
-//        	perLabelSets.clearSelection();
-//        	perLabelSets.selectAdditionalSubset(i);
-//        		
-//        	Double parameter = -1.0;
-//        		
-//        	nextExample = perLabelSets.iterator().next();
-//        	labelValue = nextExample.getValueAsString(label);
-//        		
-//        	// check if there is any pair for current class
-//        	for(String[] pair : valuePairs){
-//        		if(labelValue.equals(pair[0])) {
-//        			parameter = Double.valueOf(pair[1]);
-//        			break;
-//        		}
-//        	}
-//        		
-//        	setPart = 0.0;
-//        	
-//        	// removing examples from subset
-//        	if(parameter < 1.0 && parameter >= 0.0) {
-//        		setPart = perLabelSets.size() * (1.0 - parameter);
-//        		randomExampleSet = generateRandomExampleSetWithRemovedExamples(
-//        				createExampleSetFromIndiceList(originalSet, createParentIndices(perLabelSets)), 
-//        				setPart.intValue());
-//        		newExampleSetList.add(randomExampleSet);
-//        	}
-//        	// adding examples to subset
-//        	else if(parameter > 1.0) {
-//        		setPart = perLabelSets.size() * (parameter - 1.0);
-//        		randomExampleSet = generateRandomExampleSet(createExampleSetFromIndiceList(originalSet, 
-//        				createParentIndices(perLabelSets)), setPart.intValue());
-//        		newExampleSetList.add(randomExampleSet);
-//        	}
-//        	// copy current subset
-//        	else {
-//        		randomExampleSet = createExampleSetFromIndiceList(originalSet, createParentIndices(perLabelSets));
-//        		newExampleSetList.add(randomExampleSet);
-//        	}
-//        }
-//
-//        // merge all created subsets
-//        newExampleSet = mergeOperator.merge(newExampleSetList);
-//        
-//        return newExampleSet;
-        
-        
-	}
-	
-	/**
-	 * Creates new ExampleSet object. It contains examples from example set from parameter exampleSet and 
-	 * random chosen rows from exampleSet. NumberOfIndices tells how many new examples should be selected.
-	 * @param exampleSet - original example set
-	 * @param numberOfIndices - number of new examples
-	 * @return ExampleSet object with examples from exampleSet and new randomly selected from exampleSet
-	 */
-	private ExampleSet generateRandomExampleSet(ExampleSet exampleSet, Integer numberOfIndices){
-		Random randomGenerator = new Random();
-		ExampleTable exampleTable = exampleSet.getExampleTable();
-		MemoryExampleTable table = MemoryExampleTable.createCompleteCopy(exampleTable);	
-		
-		for(int i = 0; i < numberOfIndices; i++){
-			table.addDataRow(exampleTable.getDataRow(randomGenerator.nextInt(exampleTable.size())));
-		}	
-		
-        return table.createExampleSet();
-	}
-	
-	/**
-	 * Creates new ExampleSet object. It is based on example set from parameter exampleSet but with randomly
-	 * removed examples. NumberOfIndices tells how many examples should be removed.
-	 * @param exampleSet - original example set
-	 * @param numberOfIndices - number of examples to remove
-	 * @return ExampleSet object with remaining examples from exampleSet
-	 */
-	private ExampleSet generateRandomExampleSetWithRemovedExamples(ExampleSet exampleSet, Integer numberOfIndices){
-		Random randomGenerator = new Random();
-		ExampleTable exampleTable = exampleSet.getExampleTable();
-		MemoryExampleTable table = MemoryExampleTable.createCompleteCopy(exampleTable);
-				
-		if(numberOfIndices > exampleTable.size())
-			numberOfIndices = exampleTable.size();
-		
-		for(int i = 0; i < numberOfIndices; i++){
-			 table.removeDataRow(randomGenerator.nextInt(table.size()));
-		}
-		
-        return table.createExampleSet();
-	}
-	
-	/**
-	 * Calculates parent indices for current subset.
-	 * @param set - current subset with indices to calculate
-	 * @return calculated parent indices list
-	 */
-	private List<Integer> createParentIndices(SplittedExampleSet set){
-		List<Integer> indicesList = new LinkedList<Integer>();
-		for(int i = 0; i < set.size(); i++){
-			indicesList.add(set.getActualParentIndex(i));
-		}
-		
-		return indicesList;
-	}
-	
-	/**
-	 * Creates new ExampleSet object as a subset of example set from parameter set. 
-	 * Indices list has indices for elements in example set from parameter set. 
-	 * @param set - actual set
-	 * @param indicesList - list of indices for example set
-	 * @return ExampleSet object which is a subset of parameter set 
-	 */
-	private ExampleSet createExampleSetFromIndiceList(ExampleSet set, List<Integer> indicesList){
-		ExampleTable setTable = set.getExampleTable();
-		Attribute[] attributes = setTable.getAttributes();
-		MemoryExampleTable table = new MemoryExampleTable(attributes);
-		
-		for(int i = 0; i < indicesList.size(); i++){
-			table.addDataRow(setTable.getDataRow(indicesList.get(i)));
-		}
-		
-		return table.createExampleSet();
 	}
 	
 	@Override
@@ -366,6 +233,7 @@ public class Smote extends Operator{
 	        types.add(type);
 	        types.add(type2);
 	        types.add(type3);
+	        types.addAll(DistanceMeasures.getParameterTypes(this));
 	        
 	        return types;
 	}
