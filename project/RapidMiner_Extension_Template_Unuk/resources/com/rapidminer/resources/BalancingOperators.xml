@@ -11,6 +11,10 @@
 	            <key>im_glebie_w_las_tym_wiecej_drzew</key>
 	            <class>com.rapidminer.BalancedRandomForestLearner</class>
 	         </operator>
+	         <operator>
+	            <key>smote_balancing</key>
+	            <class>com.rapidminer.Smote</class>
+	         </operator>
 	      </group>
       </group>
    </group>

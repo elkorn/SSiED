@@ -40,7 +40,6 @@ import com.rapidminer.parameter.ParameterType;
 import com.rapidminer.parameter.ParameterTypeInt;
 import com.rapidminer.tools.OperatorService;
 
-
 public class BalancedRandomForestLearner extends RandomTreeLearner {
 
 	/** The parameter name for the number of trees. */
@@ -59,19 +58,25 @@ public class BalancedRandomForestLearner extends RandomTreeLearner {
 	public Model learn(ExampleSet exampleSet) throws OperatorException {
 		BootstrappingOperator bootstrapping = null;
 		try {
-			bootstrapping = OperatorService.createOperator(BootstrappingOperator.class);
-			bootstrapping.setParameter(BootstrappingOperator.PARAMETER_USE_WEIGHTS, "true");
-			bootstrapping.setParameter(BootstrappingOperator.PARAMETER_SAMPLE_RATIO, "1.0");
+			bootstrapping = OperatorService
+					.createOperator(BootstrappingOperator.class);
+			bootstrapping.setParameter(
+					BootstrappingOperator.PARAMETER_USE_WEIGHTS, "true");
+			bootstrapping.setParameter(
+					BootstrappingOperator.PARAMETER_SAMPLE_RATIO, "1.0");
 		} catch (OperatorCreationException e) {
-			throw new OperatorException(getName() + ": cannot construct random tree learner: " + e.getMessage());
+			throw new OperatorException(getName()
+					+ ": cannot construct random tree learner: "
+					+ e.getMessage());
 		}
 
 		// learn base models
 		List<TreeModel> baseModels = new LinkedList<TreeModel>();
 		int numberOfTrees = getParameterAsInt(PARAMETER_NUMBER_OF_TREES);
-		
+
 		for (int i = 0; i < numberOfTrees; i++) {
-			TreeModel model = (TreeModel)super.learn(bootstrapping.applyBalanced(exampleSet));
+			TreeModel model = (TreeModel) super.learn(bootstrapping
+					.applyBalanced(exampleSet));
 			model.setSource(getName());
 			baseModels.add(model);
 		}
@@ -102,7 +107,8 @@ public class BalancedRandomForestLearner extends RandomTreeLearner {
 
 		List<ParameterType> types = new LinkedList<ParameterType>();
 
-		ParameterType type = new ParameterTypeInt(PARAMETER_NUMBER_OF_TREES, "The number of learned random trees.", 1, Integer.MAX_VALUE, 10);
+		ParameterType type = new ParameterTypeInt(PARAMETER_NUMBER_OF_TREES,
+				"The number of learned random trees.", 1, Integer.MAX_VALUE, 10);
 		type.setExpert(false);
 		types.add(type);
 

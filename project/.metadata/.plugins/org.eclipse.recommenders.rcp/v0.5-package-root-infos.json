@@ -1,0 +1,1068 @@
+[
+  {
+    "symbolicName": "org.apache.xmlrpc.xmlrpc-client",
+    "version": {
+      "major": 3,
+      "minor": 1,
+      "micro": 3,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e486ad917028b52265610206fb5a1e2b5914b94b",
+    "jarFileModificationDate": "2014-01-03T15:39:56.710+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\xmlrpc-client-3.1.3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "rm_doc",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2c61c7c55742e7071f0ba45b8e4558f721af330d",
+    "jarFileModificationDate": "2014-01-03T15:39:56.610+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\rm_doc.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-util",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "784c3a5bd5b6ae419ab2285c24fdfe8f064e854a",
+    "jarFileModificationDate": "2014-01-03T15:39:56.184+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-util.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.xmlrpc.xmlrpc-common",
+    "version": {
+      "major": 3,
+      "minor": 1,
+      "micro": 3,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "415daf1f1473a947452588906dc9f5b3575fb44d",
+    "jarFileModificationDate": "2014-01-03T15:39:56.717+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\xmlrpc-common-3.1.3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "net.sf.jung.jung-algorithms",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "92f5ec46ae38da8f8c2d8c6e0ac248f2f670f7d7",
+    "jarFileModificationDate": "2014-01-03T15:39:56.421+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jung-algorithms.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-export",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 3,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5434fd30ccd1e71b1070ce4e6e6344625165924c",
+    "jarFileModificationDate": "2014-01-03T15:39:56.160+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-export.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "encog",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9fdfec308a433f7e118f284e92c1da91c50d9593",
+    "jarFileModificationDate": "2014-01-03T15:39:56.159+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\encog.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.swinglabs.swingx.swingx-all",
+    "version": {
+      "major": 1,
+      "minor": 6,
+      "micro": 4,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c0d8a3265d194cc886bafd585117b6465fd97dce",
+    "jarFileModificationDate": "2014-01-03T15:39:56.652+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\swingx-all-1.6.4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "poi-ooxml-3.8-20120326",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "235d18adccc2b140fb3f90a2fa859b7ae29d57b8",
+    "jarFileModificationDate": "2014-01-03T15:39:56.511+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\poi-ooxml-3.8-20120326.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.ws.commons.util.ws-commons-util",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 2,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3f478e6def772c19d1053f61198fa1f6a6119238",
+    "jarFileModificationDate": "2014-01-03T15:39:56.661+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\ws-commons-util-1.0.2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-graphicsio-swf",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "816b5cf8c2d53a9ae5bb857cd561f3b7f19167ee",
+    "jarFileModificationDate": "2014-01-03T15:39:56.174+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-graphicsio-swf.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "looks",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a4a72ad929ee21be1189e4ab542a77a257c6f865",
+    "jarFileModificationDate": "2014-01-03T15:39:56.453+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\looks.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.eobjects.sassyreader.SassyReader",
+    "version": {
+      "major": 0,
+      "minor": 5,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f63e988d39f987bc64b701cfb1eb54581ff03bb7",
+    "jarFileModificationDate": "2014-01-03T15:39:56.102+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\SassyReader-0.5.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "slf4j.api",
+    "version": {
+      "major": 1,
+      "minor": 6,
+      "micro": 4,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "bff73780230e6559b63134bbc2056c312eabb849",
+    "jarFileModificationDate": "2014-01-03T15:39:56.625+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\slf4j-api-1.6.4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jep",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "28bc457fa4fc11413e9e83dad2f3347ff5f7094c",
+    "jarFileModificationDate": "2014-01-03T15:39:56.367+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jep.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jxl",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2a404770ea5d36eab26ad50db9c137d09f1c487d",
+    "jarFileModificationDate": "2014-01-03T15:39:56.444+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jxl.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "poi-scratchpad-3.8-20120326",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "33ef3eb7bd97c0dcdf2873b0e0a0938f013d410c",
+    "jarFileModificationDate": "2014-01-03T15:39:56.592+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\poi-scratchpad-3.8-20120326.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-graphicsio-ps",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cca5a16baacbc30ac320e8eddfd7916fa33a44a0",
+    "jarFileModificationDate": "2014-01-03T15:39:56.168+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-graphicsio-ps.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "poi-ooxml-schemas-3.8-20120326",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cb3b26809ec65eba22143acfddf654bcf70aa009",
+    "jarFileModificationDate": "2014-01-03T15:39:56.574+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\poi-ooxml-schemas-3.8-20120326.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "blas",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b657d7644656db0d75f042f6cb4995de57aeed46",
+    "jarFileModificationDate": "2014-01-03T15:39:56.104+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\blas.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jama",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "855cfe0b90f6869f0607df1897eaa3c2ab499c7c",
+    "jarFileModificationDate": "2014-01-03T15:39:56.309+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jama.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "vldocking",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c42088f13c3ef7b4e5cf875dbc00a866c0b4605f",
+    "jarFileModificationDate": "2014-01-03T15:39:55.879+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Extension_Template_Unuk\\lib\\vldocking.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "be4124ecceb37230419f0f31ea6e7d50babb4973",
+    "jarFileModificationDate": "2014-01-19T18:46:25.555+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4a87e4caa30fe9f43e388d12f0766fb532e0c912",
+    "jarFileModificationDate": "2014-01-19T18:46:25.558+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\jfr.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "net.sf.jung.jung-graph-impl",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b62f5ef87df4a1a78669c6a66a17c50e794a39ef",
+    "jarFileModificationDate": "2014-01-03T15:39:56.424+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jung-graph-impl.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-xml",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ac9722744f579886ddde77a7ef8adb8f964474ea",
+    "jarFileModificationDate": "2014-01-03T15:39:56.186+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-xml.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "46f537010a194c3f1b4cf5fa708758efa2a93b72",
+    "jarFileModificationDate": "2014-01-19T18:46:25.483+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.apache.commons.codec",
+    "version": {
+      "major": 1,
+      "minor": 4,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4216af16d38465bbab0f3dff8efa14204f7a399a",
+    "jarFileModificationDate": "2014-01-03T15:39:56.127+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\commons-codec-1.4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "xpp3",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cbb9d21eed484a16e0c0bd712830a80c75970753",
+    "jarFileModificationDate": "2014-01-03T15:39:56.718+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\xpp3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jugpreview",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "99589409d422cb789559138ab781eedaeba802f9",
+    "jarFileModificationDate": "2014-01-03T15:39:56.417+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jugpreview.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-collections",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f951934aa5ae5a88d7e6dfaa6d32307d834a88be",
+    "jarFileModificationDate": "2014-01-03T15:39:56.135+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\commons-collections.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-graphicsio-svg",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "bf2413466148c6eb712ec5b2433c6c0ad31e696c",
+    "jarFileModificationDate": "2014-01-03T15:39:56.169+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-graphicsio-svg.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "edb1f5eff13f66d904b68a10f5e00a2286b4a4d0",
+    "jarFileModificationDate": "2014-01-19T18:46:52.733+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "xmlpull",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2b8e230d2ab644e4ecaa94db7cdedbc40c805dfa",
+    "jarFileModificationDate": "2014-01-03T15:39:56.708+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\xmlpull.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-graphicsio",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "df8c2866e86a76977ad68cb2343422c7297ac554",
+    "jarFileModificationDate": "2014-01-03T15:39:56.177+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-graphicsio.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-logging-1.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ba24d5de831911b684c92cd289ed5ff826271824",
+    "jarFileModificationDate": "2014-01-03T15:39:56.148+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\commons-logging-1.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "95dc9053062d68cde4e8c38494cc63aefd7b0a42",
+    "jarFileModificationDate": "2014-01-19T18:46:25.487+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\ext\\sunec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jcommon",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "348f9e02dfd982b105133aea7f702baca4427364",
+    "jarFileModificationDate": "2014-01-03T15:39:56.314+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jcommon.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "kdb",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a2847959de00a042cee0f70a8aa9d4ba374b4b93",
+    "jarFileModificationDate": "2014-01-03T15:39:56.446+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\kdb.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "poi-3.8-20120326",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "552a7703d32c57adb611df084b45f7158e8653f3",
+    "jarFileModificationDate": "2014-01-03T15:39:56.495+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\poi-3.8-20120326.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "concurrent",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1cf394c2a388199db550cda311174a4c6a7d117c",
+    "jarFileModificationDate": "2014-01-03T15:39:56.151+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\concurrent.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1826204b0e05aef412b595321866f7d190e0498d",
+    "jarFileModificationDate": "2014-01-19T18:46:25.508+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d467db004ae22899af088086984b740bf979b169",
+    "jarFileModificationDate": "2014-01-19T18:46:49.567+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.apache.commons.lang",
+    "version": {
+      "major": 2,
+      "minor": 4,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "16313e02a793435009f1e458fa4af5d879f6fb11",
+    "jarFileModificationDate": "2014-01-03T15:39:56.147+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\commons-lang-2.4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "net.sf.jung.jung-api",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "57fd76193678164508a6bfa98375c2868ba87e94",
+    "jarFileModificationDate": "2014-01-03T15:39:56.422+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jung-api.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jtds-1.2.8",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "111abf08f69f350923d34d64267a67d7367d4230",
+    "jarFileModificationDate": "2014-01-03T15:39:56.337+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jdbc\\jtds-1.2.8.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "postgresql-9.2-1002.jdbc4",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "65b528162f7cf20b4d44bc31a446724e217ba35b",
+    "jarFileModificationDate": "2014-01-03T15:39:56.365+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jdbc\\postgresql-9.2-1002.jdbc4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "slf4j.simple",
+    "version": {
+      "major": 1,
+      "minor": 6,
+      "micro": 4,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "53e62355dbebdff404784b331938538b463d390a",
+    "jarFileModificationDate": "2014-01-03T15:39:56.626+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\slf4j-simple-1.6.4.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4c767f7289dd16427acc3063ffe603cf04536616",
+    "jarFileModificationDate": "2014-01-19T18:46:25.509+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\ext\\zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "com.thoughtworks.xstream.xstream",
+    "version": {
+      "major": 1,
+      "minor": 4,
+      "micro": 2,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "97e5013f391487cce4de6b0eebcde21549e91872",
+    "jarFileModificationDate": "2014-01-03T15:39:56.736+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\xstream.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "vldocking",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "660afff944ec993b1d5c8633e50eb9a8b484092a",
+    "jarFileModificationDate": "2014-01-03T15:39:56.660+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\vldocking.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "microba",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "aa6e28a457ba4cf3056eb6f27139cce9f20714c7",
+    "jarFileModificationDate": "2014-01-03T15:39:56.466+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\microba.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "net.sf.jung.jung-visualization",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "595e1683a4b9132097ecb603515525dd227b77a8",
+    "jarFileModificationDate": "2014-01-03T15:39:56.429+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jung-visualization.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "xmlbeans-2.3.0",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8704dcf5c9f10265a08f5020b0fab70eb64ac3c4",
+    "jarFileModificationDate": "2014-01-03T15:39:56.704+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\xmlbeans-2.3.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "97232c0d837b619a3d5612873718d20c38b2307a",
+    "jarFileModificationDate": "2014-01-19T18:46:26.262+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.apache.ivy",
+    "version": {
+      "major": 2,
+      "minor": 2,
+      "micro": 0,
+      "qualifier": "final_20100923230623"
+    },
+    "jarFileFingerprint": "f9d1e83e82fc085093510f7d2e77d81d52bc2081",
+    "jarFileModificationDate": "2014-01-03T15:39:56.308+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\ivy-2.2.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "18121f376b70a5b13ab36e9859aa7be525114849",
+    "jarFileModificationDate": "2014-01-19T18:46:25.482+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\ext\\access-bridge-64.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "rsyntaxtextarea",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "41eced4029950c9524aea9926041a4e1b9c071f4",
+    "jarFileModificationDate": "2014-01-03T15:39:56.622+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\rsyntaxtextarea.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-graphics2d",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8c92f6a5cb2920cf787fd6969fa33d7f7e829a5e",
+    "jarFileModificationDate": "2014-01-03T15:39:56.163+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-graphics2d.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "hsqldb",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b6adff9f32a3d6ad011a6b13e553fe411ea158f8",
+    "jarFileModificationDate": "2014-01-03T15:39:56.327+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jdbc\\hsqldb.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a3208d0b79b8c2a9c6f78da804a5c544ff0b6d96",
+    "jarFileModificationDate": "2014-01-19T18:46:57.901+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.freehep.freehep-io",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4be1914c0a832477613f5b1fd7fc506422211c62",
+    "jarFileModificationDate": "2014-01-03T15:39:56.179+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-io.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jmathplot",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "50b6ae20adc7289396ad19b2f349d6958ee7955e",
+    "jarFileModificationDate": "2014-01-03T15:39:56.411+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jmathplot.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "colt",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0abc984f3adc760684d49e0f11ddf167ba516d4f",
+    "jarFileModificationDate": "2014-01-03T15:39:56.124+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\colt.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.mysql.jdbc",
+    "version": {
+      "major": 5,
+      "minor": 1,
+      "micro": 24,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a7d599d73b86a928303909b9be7573a4ea0ed28e",
+    "jarFileModificationDate": "2014-01-03T15:39:56.355+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jdbc\\mysql-connector-java-5.1.24-bin.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "iijdbc-10.0-4.0.6",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "46a0d6a9381ac6790dec71e574bcd99317358fcf",
+    "jarFileModificationDate": "2014-01-03T15:39:56.332+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jdbc\\iijdbc-10.0-4.0.6.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-graphicsio-pdf",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b1dc2c5fe487c57f59b6da8bcc062bdf29c2227d",
+    "jarFileModificationDate": "2014-01-03T15:39:56.167+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-graphicsio-pdf.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "collections-generic",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "12dddecd8e8c24f5c9453a6d3ecb13b38e59db52",
+    "jarFileModificationDate": "2014-01-03T15:39:56.114+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\collections-generic.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.itextpdf",
+    "version": {
+      "major": 5,
+      "minor": 3,
+      "micro": 3,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6707823d598a75eb9959635b72d45dc318714a09",
+    "jarFileModificationDate": "2014-01-03T15:39:56.293+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\itextpdf-5.3.3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "dom4j-1.6.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5d3ccc056b6f056dbf0dddfdf43894b9065a8f94",
+    "jarFileModificationDate": "2014-01-03T15:39:56.156+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\dom4j-1.6.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "joone-engine",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6d445cc3131ca37fbb4503bf3dc0c3000034c7d6",
+    "jarFileModificationDate": "2014-01-03T15:39:56.416+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\joone-engine.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "javax.mail.mail",
+    "version": {
+      "major": 1,
+      "minor": 4,
+      "micro": 2,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "36b5cee9ec42001a3d0358fdd75e99274e2599fb",
+    "jarFileModificationDate": "2014-01-03T15:39:56.459+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\mail.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-graphicsio-emf",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "eb9b317c65c6d3c7bc2f4d5195154782e8bb46b0",
+    "jarFileModificationDate": "2014-01-03T15:39:56.165+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-graphicsio-emf.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.freehep.freehep-swing",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 2,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4dcc8a947c4fc6d331b08fd1dbca9ecb68373cbe",
+    "jarFileModificationDate": "2014-01-03T15:39:56.182+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\freehep\\freehep-swing.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "59685bead3fa4101bb13280f1a04ac98b7888e01",
+    "jarFileModificationDate": "2014-01-19T18:46:25.484+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\ext\\jaccess.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "groovy-all",
+    "version": {
+      "major": 1,
+      "minor": 7,
+      "micro": 7,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ddd97a1bddbe57a3c6dccea5879b90d4a614fa00",
+    "jarFileModificationDate": "2014-01-03T15:39:56.267+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\groovy-all-1.7.7.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jfreechart",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8ceb15028cf9b99c25c88775ab292faa27d3030a",
+    "jarFileModificationDate": "2014-01-03T15:39:56.387+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\jfreechart.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "junit",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e4f1766ce7404a08f45d859fb9c226fc9e41a861",
+    "jarFileModificationDate": "2014-01-03T15:39:56.433+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\junit.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "poi-excelant-3.8-20120326",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b6188f3f0b55783854b018a175596c7f25df2826",
+    "jarFileModificationDate": "2014-01-03T15:39:56.497+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\poi-excelant-3.8-20120326.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1b5877470adcb83b82d13fbfd76b009d7a9f2e7f",
+    "jarFileModificationDate": "2014-01-19T18:46:57.361+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a3d1a9689f1c8e36ab64fb669df92076771c42f2",
+    "jarFileModificationDate": "2014-01-19T18:46:25.508+01:00",
+    "location": "D:\\Program Files\\Java\\jdk1.7.0_51\\jre\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "commons-httpclient-3.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "964cd74171f427720480efdec40a7c7f6e58426a",
+    "jarFileModificationDate": "2014-01-03T15:39:56.142+01:00",
+    "location": "C:\\Users\\mr_shelp\\Documents\\GitHub\\SSiED\\project\\RapidMiner_Unuk\\lib\\commons-httpclient-3.1.jar",
+    "javaRuntime": false
+  }
+]

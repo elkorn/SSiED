@@ -26,7 +26,7 @@ rem ###  Setting Maximal Amount of Memory  ###
 rem ###                                    ###
 rem ##########################################
 
-if "%MAX_JAVA_MEMORY%"=="" set MAX_JAVA_MEMORY=1024
+if "%MAX_JAVA_MEMORY%"=="" set MAX_JAVA_MEMORY=3072
 
 rem ###########################################
 rem ###                                     ###
