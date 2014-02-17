@@ -1,0 +1,36 @@
+pierwsze trza pokazać irysy, przed i po smote, widać na nich dokładnie jak się genrują obiekty syntetyczne 
+[irysy_po_smote.png, irysy_przed_smote.png]
+
+
+Przeprowadziłem normalną symulacje, ale zwiększanie klasy ataku przez smote jest głupie, bo może tylko pogorszyć klasyfikacje - wszystko to dlatego że przygotowane dane testowe zawierają więcej klas ataku niż normalnych..
+
+następnie są dwa screeny z danymi treningowymi, trzeba napisać że trudno wybrać odpowienie atrybuty aby wygenerować syntetyki, ale na wykresie mniejwięcej widać to
+[sample_po_smote.png, sample_przed_smote.png]
+
+następnie trzeba pokazać tablicę performance dla drzewa decyzyjnego 
+[dane przed smote_tree.pdf]
+
+dokonane zostały 3 symulacje dla drzew decyzyjnych
+[wszystkie pliki wyglądają tak kiedy_zwiekszamy_{{klasa}}_tree.pdf]
+
+pod - poprawa wyników ze względu na zwiększenie się precyzji drzewa - przed Smote zaliczał obiekt innej klasy do pos, po smote (dodaniu syntetyków) problem znika
+satan - o dziwo klasyfikacja nie poprawiła się, wręcz przeciwnie, najprawdopodniej syntetyki sprawiły że reguły obejmują więcej obiektów i klasyfikują je jako satan
+ipsweep - tak jak wyżej klasyfikacja się pogorszyła, kwalifikuje inn obiekty jako ipsweep, jest to jakiś wniosek - można stwierdzić że smote nie jest taki spoko jak nam się wydaje
+
+RANDOM FOREST
+Bez Smote klasyfikuje beznadziejnie, wszystkie dla niego są normal (dlaczego!)
+[dane_przed_smote_forest.pdf]
+
+dokonane zostały 3 symulacje zwiększano kolejno:
+[wszystkie pliki wyglądają tak kiedy_zwiekszamy_{{klasa}}_forest.pdf]
+
+ipsweep - poprawa wyników, syntetyki poprawiły ogólną klasyfikacje, ale dla samego rozpoznawania ipsweep precyzja zwiększyła się z 0 do 0,15
+satan - poprawa wyniów była zatrwarzająca - z 0 do 100 precyzji, Smote pomógł bardzo
+pod - nic się nie zmieniło, nawet przy próbie wygenerowania aż 9 krotnie większej liczby syntetyków
+
+Co jeszcze mogę zrobić?
+Obliczać dla każdego jego pokrycie, precyjze itd?
+
+
+
+

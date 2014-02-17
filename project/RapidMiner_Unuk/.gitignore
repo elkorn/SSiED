@@ -1,8 +1,0 @@
-build/
-build_test/
-installation/version.nsi
-/deploy
-/dev
-/javadoc
-resources/com/rapidminer/resources/test/
-/build
