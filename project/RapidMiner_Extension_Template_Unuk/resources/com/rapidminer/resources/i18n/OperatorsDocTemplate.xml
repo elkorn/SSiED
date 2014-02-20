@@ -11,7 +11,12 @@
 		</inputPorts>
 	</operator>
 	
-	
+	<operator>
+  		<key>weighted_random_forest</key>
+    	<name>Weighted random forest</name>
+    	<synopsis>A random forest using the Gini criterion for discerning class weights.</synopsis>
+    	<help>A random forest using Gini criterion for discerning class weights.</help>
+	</operator>
 	
     <!--  This is an example how to specify the description of operators and the translation of it's key identifier
     to names. 
