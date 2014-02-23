@@ -12,6 +12,10 @@
 	            <class>com.rapidminer.BalancedRandomForestLearner</class>
 	         </operator>
 	         <operator>
+	            <key>weighted_random_forest</key>
+	            <class>com.rapidminer.WeightedRandomForestLearner</class>
+	         </operator>
+	         <operator>
 	            <key>smote_balancing</key>
 	            <class>com.rapidminer.Smote</class>
 	         </operator>
