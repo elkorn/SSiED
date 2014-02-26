@@ -35,12 +35,9 @@ import com.rapidminer.operator.learner.PredictionModel;
 import com.rapidminer.operator.learner.tree.RandomForestModel;
 import com.rapidminer.operator.learner.tree.RandomTreeLearner;
 import com.rapidminer.operator.learner.tree.TreeModel;
-import com.rapidminer.operator.preprocessing.sampling.BootstrappingOperator;
 import com.rapidminer.parameter.ParameterType;
 import com.rapidminer.parameter.ParameterTypeInt;
-import com.rapidminer.tools.OperatorService;
-import com.rapidminer.operator.preprocessing.sampling.BootstrappingOperator;
-import com.rapidminer.operator.preprocessing.sampling.Bootstrapping;
+//import com.rapidminer.tools.OperatorService;
 
 public class BalancedRandomForestLearner extends RandomTreeLearner {
 
@@ -60,10 +57,11 @@ public class BalancedRandomForestLearner extends RandomTreeLearner {
 	public Model learn(ExampleSet exampleSet) throws OperatorException {
 		BootstrappingOperator bootstrapping = null;
 		try {
-			bootstrapping = OperatorService.createOperator(BootstrappingOperator.class);
+			bootstrapping = new BootstrappingOperator(getOperatorDescription());
+			//bootstrapping = OperatorService.createOperator(BootstrappingOperator.class);
 			bootstrapping.setParameter(BootstrappingOperator.PARAMETER_USE_WEIGHTS, "true");
 			bootstrapping.setParameter(BootstrappingOperator.PARAMETER_SAMPLE_RATIO, "1.0");
-		} catch (OperatorCreationException e) {
+		} catch (/*OperatorCreationException*/ Exception e) {
 			throw new OperatorException(getName() + ": cannot construct random tree learner: " + e.getMessage());
 		}
 
